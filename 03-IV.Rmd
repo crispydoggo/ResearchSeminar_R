@@ -37,3 +37,26 @@ Acemoglu et al. study institutions with more secure property irghts, and less di
 
 2. **What is their main finding, i.e., how does this institution influence income levels?**
 
+
+
+
+
+## Key Results
+
+```{r data, include= FALSE}
+
+MI <- read_dta("final_dataset_MI.dta")
+table5 <- read_dta("maketable5.dta")
+
+```
+
+
+```{r light, include = FALSE}
+
+MI <- MI %>% 
+  select( change10_ineq, pre_demo_ineg_best, acemoglu_demo, ccodealp)
+
+MI <- MI %>% 
+ filter( !is.na(change10_ineq))
+
+```
