@@ -43,15 +43,15 @@ Acemoglu et al. study institutions with more secure property irghts, and less di
 
 ## Key Results
 
-```{r data, include= FALSE}
+```{r data, echo = FALSE}
 
-MI <- read_dta("final_dataset_MI.dta")
-table5 <- read_dta("maketable5.dta")
+MI <- read_dta("./Data/final_dataset_MI.dta")
+table5 <- read_dta("./Data/maketable5.dta")
 
 ```
 
 
-```{r light, include = FALSE}
+```{r light, echo  = FALSE}
 
 MI <- MI %>% 
   select( change10_ineq, pre_demo_ineg_best, acemoglu_demo, ccodealp)
