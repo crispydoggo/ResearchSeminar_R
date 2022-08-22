@@ -1,0 +1,39 @@
+# (PART\*) Empirical Methods {-}
+
+
+# Instrumental Variables: The Colonial Origins of Comparative Development
+
+From now on, we will implement an event study case based on an empirical paper to illustrate in practice how the analysis is made. The examples follow the empirical exercises of Jaakko's graduate course _Tópicos de Microeconomía_ at ITAM.For the theory and context of the method, check [Chapter 7](https://mixtape.scunning.com/07-instrumental_variables) of Scott Cunningham's Causal Inference Mixtape.
+
+
+We will use the following packages: install them before loading them.
+
+
+```{r , include =TRUE}
+
+# 1. Data arrange, importing data, strings and more. Check what it includes!
+library(tidyverse) 
+
+# 2. Read .dta Format
+library(haven) 
+
+# 3. Robust standard errors
+library(estimatr)
+
+# 4. ivreg: instrumental variables
+library(ivreg) 
+```
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+
+```
+
+## Paper Discussion
+
+1. **What kind of institution do Acemoglu et al. study in their paper? How do they measure the presence of this institution?** 
+
+Acemoglu et al. study institutions with more secure property irghts, and less distortionary policies. They are referred to "good institutions", and are measured with the Average Protection Against Expropiation Risk that is measured on a scale from 0 to 10.
+
+2. **What is their main finding, i.e., how does this institution influence income levels?**
+

@@ -1,0 +1,57 @@
+# (PART\*) R crash course{-}
+
+
+# Setting R
+
+R is a language and environment for statistical computing and graphics, which can be extended through packages. R was built as an open-source project, meaning every package and software is free! You can visit their [site](https://www.r-project.org/about.html) if you are interested in more technical aspects. To start using R, you need to install two complementary things:
+
+1. **R:** is the raw software that will run the code
+
+2. **R Studio:** is an Integrated  Development Software (IDE), a computer application that provides comprehensive services to make it easier for the developer or programmer to develop software. 
+
+Both installations are designed to be simple and accessible:
+
+1. **R**, [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/), can be downloaded for any platform. After clicking the link, choose the appropriate (Linux, (Mac) OS X, or Windows) installation file for R. Download and install R on your computer.
+
+2. **R studio** provides the previous step and its installation in the following [link](https://www.rstudio.com/products/rstudio/download/#download).
+
+A nice overview of R Studio interface and windows can be found at [RStudio Layout](https://rbasics.netlify.app/3-rstudiobasics.html#working-in-rstudio-server). The reference works through an R Studio server; since our recommendation and approach is to download R studio, you don't have to worry about logging in.
+
+
+# R Basics
+
+Lucky for you, ITAM has an available [GitHub Student Developer Pack](https://education.github.com/pack) for every active student! GitHub Education gives students hands-on experience with free access to various developer tools from GitHub partners. 
+
+We recommend activating your free trial for [DataCamp](https://www.datacamp.com/); it provides R, Python, SQL and more programming courses. I will give you **one BIG cookie** for every **statement of accomplishment** you achieve during this semester of DataCamp.
+
+If you don't want to cover the basics in detail, try these small tutorials to familiarize yourself with the R syntax and RStudio:
+
+1. [RStudio and Working Environment](https://rbasics.netlify.app/3-rstudiobasics.html#working-in-rstudio-server)
+2. [R syntax, basic objects and operations](http://r-statistics.co/R-Tutorial.html)
+
+Further, we will cover some essential aspects just as the bare minimum requirements for understanding these notes to some extent.
+
+## Installing Packages
+
+As an open-source project, R has a **universe of add-ons**; additional content is included as a package. For **every idea or problem** you may encounter, **someone has already worked on it** and published it somewhere.
+
+1. To install a package, you need to type `install.packages("package_name")` into the R console or an R script. Press the `enter` key if you are in the R console or press the `shift + enter` key if you are in an R script.
+
+
+```{r install, eval = FALSE, echo = TRUE}
+
+install.packages("estimatr") # For robust standard errors
+
+```
+2. To load a package, you must type `library(package_name)`. Press the `enter` key if you are in the R console or press the `shift + enter` key if you are in an R script.
+
+```{r load, eval = FALSE, echo = TRUE}
+
+library(estimatr) # Loading the library
+
+```
+
+You only need to **install a package once**, but you **must load a package every time** you close and restart R; R needs to know which resources you plan to work with on each session.
+
+
+
