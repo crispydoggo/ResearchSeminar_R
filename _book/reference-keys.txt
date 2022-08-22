@@ -6,5 +6,8 @@ plotting-with-ggplot2
 instrumental-variables-the-colonial-origins-of-comparative-development
 paper-discussion
 key-results
+endogeneity-discussion
+instrumental-variables
+iv-part-2
 rdd
 dd

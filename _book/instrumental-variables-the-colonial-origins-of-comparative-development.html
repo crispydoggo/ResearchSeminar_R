@@ -148,6 +148,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>5.1</b> Paper Discussion</a></li>
 <li class="chapter" data-level="5.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>5.2</b> Key Results</a></li>
+<li class="chapter" data-level="5.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>5.3</b> Endogeneity Discussion</a></li>
+<li class="chapter" data-level="5.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>5.4</b> Instrumental Variables</a></li>
+<li class="chapter" data-level="5.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>5.5</b> IV Part 2</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>6</b> RDD</a></li>
 <li class="chapter" data-level="7" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>7</b> DD</a></li>
@@ -209,6 +212,234 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="key-results" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Key Results<a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="endogeneity-discussion" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Endogeneity Discussion<a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Institutions may be endogenous for various reasons. Acemoglu et al. thus use an instrumental variables approach.</p>
+<ol style="list-style-type: decimal">
+<li>What instrument do they use? How do they justify the use of this instrument?</li>
+</ol>
+<p>The proposed instrument is the mortality of settlers. They justify it by arguing that mortality of settlers doesn’t affect the GDP per capita today.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>One important criterion for a good instrument is the exclusion restriction. What are some threats to this? What do Acemoglu et al. conclude about these threats?</li>
+</ol>
+<p>The exclusion restriction states that the instrument <span class="math inline">\(Z\)</span> must also be uncorrelated with the error term, <span class="math inline">\(\epsilon\)</span> . A threat is that past health determines current health; thus, past health is correlated with GDP. Although, they justify the uncorrelatedness of mortality with GDP by arguing that the natives were resiliant to the deseases that killed the settlers.</p>
+</div>
+<div id="instrumental-variables" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Instrumental Variables<a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Plot a nice-looking graph that illustrates the relationship between the outcome variable and the instrument.</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">filter</span>(table5, f_french <span class="sc">+</span> f_brit <span class="sc">&gt;=</span> <span class="dv">1</span>), <span class="fu">aes</span>( <span class="at">y =</span> logpgp95, <span class="at">x =</span> logem4, <span class="at">label =</span> shortnam)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Log of Settler Mortality&quot;</span>, <span class="at">y =</span> <span class="st">&quot; Log GDP Per-Capita 1995&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Figure 1. Reduced form Relationship </span></span>
+<span id="cb6-6"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st"> &quot;</span>)<span class="sc">+</span></span>
+<span id="cb6-7"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_text</span>(<span class="at">hjust=</span><span class="dv">0</span>, <span class="at">vjust=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_classic</span>() </span></code></pre></div>
+<p><img src="_main_files/figure-html/graph_2-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Then, let us have a look at the reduced-form regression more formally. Run the regressions in part (b) but replace institutional quality with the instrumental variable. Briefly discuss the regression results.</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb7-1" aria-hidden="true" tabindex="-1"></a>f1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(logpgp95 <span class="sc">~</span> logem4, <span class="at">data =</span> table5)</span>
+<span id="cb7-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(f1)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = logpgp95 ~ logem4, data = table5)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.71304 -0.53326  0.01954  0.47188  1.44673 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 10.66025    0.30528   34.92  &lt; 2e-16 ***
+## logem4      -0.56412    0.06389   -8.83 2.09e-13 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.7563 on 79 degrees of freedom
+##   (82 observations deleted due to missingness)
+## Multiple R-squared:  0.4967, Adjusted R-squared:  0.4903 
+## F-statistic: 77.96 on 1 and 79 DF,  p-value: 2.094e-13</code></pre>
+<p>We note that the F-Statistic is 77.96 , therefore the instrument is strong.</p>
+</div>
+<div id="iv-part-2" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> IV Part 2<a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Try now repeating the regressions in part (b) using IV estimation. Discuss both the first stage and 2SLS results.
+Try also locating the first-stage F statistic in the regression output.</p>
+<ul>
+<li>Is the instrument weak or strong?</li>
+<li>Do you know why it is important to have a strong instrument?</li>
+</ul>
+<p>Run then the following OLS regressions, and use robust standard errors:</p>
+<ol style="list-style-type: decimal">
+<li><p>Regress the outcome variable on institutional quality, no controls</p></li>
+<li><p>Regress the outcome variable on institutional quality, and control for an indicator for French legal origin, being a former French colony, share of Catholics, share of Muslims, and share of other than Catholic/Protestant/Muslim</p></li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb9-1" aria-hidden="true" tabindex="-1"></a>lm_2 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(logpgp95 <span class="sc">~</span> sjlofr <span class="sc">+</span> f_french <span class="sc">+</span> avexpr <span class="sc">+</span> catho80 <span class="sc">+</span> muslim80 <span class="sc">+</span> no_cpm80 , <span class="at">data =</span> table5)</span>
+<span id="cb9-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_2)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm_robust(formula = logpgp95 ~ sjlofr + f_french + avexpr + catho80 + 
+##     muslim80 + no_cpm80, data = table5)
+## 
+## Standard error type:  HC2 
+## 
+## Coefficients:
+##               Estimate Std. Error t value  Pr(&gt;|t|)  CI Lower   CI Upper  DF
+## (Intercept)  4.6663414   0.403283 11.5709 2.131e-20  3.866617  5.4660660 104
+## sjlofr       0.2124659   0.227705  0.9331 3.529e-01 -0.239082  0.6640135 104
+## f_french    -0.2827433   0.199424 -1.4178 1.592e-01 -0.678208  0.1127215 104
+## avexpr       0.5417709   0.035225 15.3802 1.521e-28  0.471918  0.6116239 104
+## catho80      0.0009357   0.002681  0.3491 7.277e-01 -0.004380  0.0062514 104
+## muslim80    -0.0012009   0.003041 -0.3949 6.937e-01 -0.007231  0.0048291 104
+## no_cpm80    -0.0063496   0.002810 -2.2598 2.592e-02 -0.011922 -0.0007776 104
+## 
+## Multiple R-squared:  0.6701 ,    Adjusted R-squared:  0.651 
+## F-statistic: 101.8 on 6 and 104 DF,  p-value: &lt; 2.2e-16</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Regress the outcome variable on institutional quality, control for location of the capital (absolute latitude), an indicator for French legal origin, being a former French colony, share of Catholics, share of Muslims, and share of other than Catholic/Protestant/Muslim</li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb11-1" aria-hidden="true" tabindex="-1"></a>lm_3 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(logpgp95 <span class="sc">~</span>  avexpr <span class="sc">+</span> lat_abst <span class="sc">+</span> sjlofr <span class="sc">+</span> f_french <span class="sc">+</span> catho80 <span class="sc">+</span> muslim80 <span class="sc">+</span> no_cpm80 , <span class="at">data =</span> table5)</span>
+<span id="cb11-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_3)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm_robust(formula = logpgp95 ~ avexpr + lat_abst + sjlofr + f_french + 
+##     catho80 + muslim80 + no_cpm80, data = table5)
+## 
+## Standard error type:  HC2 
+## 
+## Coefficients:
+##               Estimate Std. Error t value  Pr(&gt;|t|)  CI Lower CI Upper  DF
+## (Intercept)  4.7837413   0.411063 11.6375 1.742e-20  3.968495 5.598987 103
+## avexpr       0.4769486   0.056589  8.4283 2.246e-13  0.364718 0.589179 103
+## lat_abst     0.8427422   0.522582  1.6126 1.099e-01 -0.193677 1.879161 103
+## sjlofr       0.2143537   0.220776  0.9709 3.339e-01 -0.223504 0.652211 103
+## f_french    -0.2961695   0.189465 -1.5632 1.211e-01 -0.671928 0.079589 103
+## catho80      0.0022475   0.002708  0.8298 4.086e-01 -0.003124 0.007619 103
+## muslim80    -0.0003111   0.003005 -0.1035 9.177e-01 -0.006270 0.005648 103
+## no_cpm80    -0.0047503   0.003049 -1.5579 1.223e-01 -0.010798 0.001297 103
+## 
+## Multiple R-squared:  0.6798 ,    Adjusted R-squared:  0.658 
+## F-statistic: 98.54 on 7 and 103 DF,  p-value: &lt; 2.2e-16</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>What is the relationship between institutional quality and income levels?</li>
+</ol>
+<p>There is a positive relationship between institutional quality and income levels.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Is this relationship statistically significant and robust to the inclusion of additional control variables?</li>
+</ol>
+<p>The relationship is statistically significant in the three cases; nevertheless, with additional control variables the effect of institutional quality decreases.</p>
+<ol style="list-style-type: decimal">
+<li>Regress the outcome variable on institutional quality, no controls</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb13-1" aria-hidden="true" tabindex="-1"></a>iv1 <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(logpgp95 <span class="sc">~</span> avexpr <span class="sc">|</span> logem4, <span class="at">data =</span> table5)</span>
+<span id="cb13-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iv1)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## ivreg(formula = logpgp95 ~ avexpr | logem4, data = table5)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.28175 -0.55059  0.03401  0.62273  1.57418 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   2.3702     0.8376   2.830  0.00612 ** 
+## avexpr        0.8684     0.1250   6.946 1.77e-09 ***
+## 
+## Diagnostic tests:
+##                  df1 df2 statistic  p-value    
+## Weak instruments   1  68     29.80 7.29e-07 ***
+## Wu-Hausman         1  67     25.17 4.11e-06 ***
+## Sargan             0  NA        NA       NA    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.8899 on 68 degrees of freedom
+## Multiple R-Squared: 0.3045,  Adjusted R-squared: 0.2942 
+## Wald test: 48.25 on 1 and 68 DF,  p-value: 1.771e-09</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Regress the outcome variable on institutional quality, and control for an indicator for French legal origin, being a former French colony, share of Catholics, share of Muslims, and share of other than Catholic/Protestant/Muslim</li>
+</ol>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb15-1" aria-hidden="true" tabindex="-1"></a>iv2 <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(logpgp95 <span class="sc">~</span> sjlofr <span class="sc">+</span> f_french <span class="sc">+</span>  catho80 <span class="sc">+</span> muslim80 <span class="sc">+</span> no_cpm80 <span class="sc">|</span> avexpr <span class="sc">|</span> logem4 , <span class="at">data =</span> table5)</span>
+<span id="cb15-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iv2)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## ivreg(formula = logpgp95 ~ sjlofr + f_french + catho80 + muslim80 + 
+##     no_cpm80 | avexpr | logem4, data = table5)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.8545 -0.5175  0.0298  0.5221  2.0379 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  2.5946375  1.2043687   2.154    0.035 *  
+## avexpr       0.8943097  0.1374527   6.506 1.44e-08 ***
+## sjlofr       0.3014438  0.3462820   0.871    0.387    
+## f_french     0.1505522  0.3184417   0.473    0.638    
+## catho80     -0.0007391  0.0090070  -0.082    0.935    
+## muslim80    -0.0081192  0.0078708  -1.032    0.306    
+## no_cpm80    -0.0136571  0.0087471  -1.561    0.123    
+## 
+## Diagnostic tests:
+##                  df1 df2 statistic  p-value    
+## Weak instruments   1  63     21.08 2.16e-05 ***
+## Wu-Hausman         1  62     21.92 1.60e-05 ***
+## Sargan             0  NA        NA       NA    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.8005 on 63 degrees of freedom
+## Multiple R-Squared: 0.4786,  Adjusted R-squared: 0.4289 
+## Wald test: 11.31 on 6 and 63 DF,  p-value: 1.541e-08</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Regress the outcome variable on institutional quality, control for location of the capital (absolute latitude), an indicator for French legal origin, being a former French colony, share of Catholics, share of Muslims, and share of other than Catholic/Protestant/Muslim</li>
+</ol>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb17-1" aria-hidden="true" tabindex="-1"></a>iv3 <span class="ot">&lt;-</span> <span class="fu">ivreg</span>(logpgp95 <span class="sc">~</span> lat_abst <span class="sc">+</span> sjlofr <span class="sc">+</span> f_french <span class="sc">+</span> catho80 <span class="sc">+</span> muslim80 <span class="sc">+</span> no_cpm80 <span class="sc">|</span> avexpr <span class="sc">|</span> logem4, <span class="at">data =</span> table5)</span>
+<span id="cb17-2"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iv3)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## ivreg(formula = logpgp95 ~ lat_abst + sjlofr + f_french + catho80 + 
+##     muslim80 + no_cpm80 | avexpr | logem4, data = table5)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.40964 -0.65770 -0.02513  0.75136  2.58007 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept)  1.547088   2.148742   0.720   0.4742   
+## avexpr       1.131255   0.348786   3.243   0.0019 **
+## lat_abst    -2.051906   1.954973  -1.050   0.2980   
+## sjlofr       0.363177   0.455680   0.797   0.4285   
+## f_french     0.266396   0.432506   0.616   0.5402   
+## catho80     -0.002328   0.011631  -0.200   0.8420   
+## muslim80    -0.008077   0.010076  -0.802   0.4259   
+## no_cpm80    -0.017948   0.012144  -1.478   0.1445   
+## 
+## Diagnostic tests:
+##                  df1 df2 statistic  p-value    
+## Weak instruments   1  62     5.943 0.017657 *  
+## Wu-Hausman         1  61    15.599 0.000206 ***
+## Sargan             0  NA        NA       NA    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.025 on 62 degrees of freedom
+## Multiple R-Squared: 0.1593,  Adjusted R-squared: 0.06439 
+## Wald test: 6.344 on 7 and 62 DF,  p-value: 1.238e-05</code></pre>
+<p>By examinating the weak instrument F statistic, only in the third case by implementing the location of the capital (absolute latitude) the instrument is weak with an F statistic of 5.93 &lt; 10.</p>
 
 </div>
 </div>
@@ -272,6 +503,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
