@@ -1,7 +1,11 @@
+fig:unnamed-chunk-4
 setting-r
 r-basics
 installing-packages
 data-wrangling
+data-set
+dplyrs-wonder
+joining-data
 plotting-with-ggplot2
 instrumental-variables-the-colonial-origins-of-comparative-development
 paper-discussion

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Setting R | _main.knit</title>
+  <title>4 Joining Data | _main.knit</title>
   <meta name="description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Setting R | _main.knit" />
+  <meta property="og:title" content="4 Joining Data | _main.knit" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/logo.png" />
   <meta property="og:description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Setting R | _main.knit" />
+  <meta name="twitter:title" content="4 Joining Data | _main.knit" />
   
   <meta name="twitter:description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="twitter:image" content="/images/logo.png" />
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="r-basics.html"/>
+<link rel="prev" href="data-wrangling.html"/>
+<link rel="next" href="plotting-with-ggplot2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -190,27 +190,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="images/hero.png">
 </div>
-<div id="setting-r" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Setting R<a href="setting-r.html#setting-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>R is a language and environment for statistical computing and graphics, which can be extended through packages. R was built as an open-source project, meaning every package and software is free! You can visit their <a href="https://www.r-project.org/about.html">site</a> if you are interested in more technical aspects. To start using R, you need to install two complementary things:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>R:</strong> is the raw software that will run the code</p></li>
-<li><p><strong>R Studio:</strong> is an Integrated Development Software (IDE), a computer application that provides comprehensive services to make it easier for the developer or programmer to develop software.</p></li>
-</ol>
-<p>Both installations are designed to be simple and accessible:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>R</strong>, <a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a>, can be downloaded for any platform. After clicking the link, choose the appropriate (Linux, (Mac) OS X, or Windows) installation file for R. Download and install R on your computer.</p></li>
-<li><p><strong>R studio</strong> provides the previous step and its installation in the following <a href="https://www.rstudio.com/products/rstudio/download/#download">link</a>.</p></li>
-</ol>
-<p>A nice overview of R Studio interface and windows can be found at <a href="https://rbasics.netlify.app/3-rstudiobasics.html#working-in-rstudio-server">RStudio Layout</a>. The reference works through an R Studio server; since our recommendation and approach is to download R studio, you don’t have to worry about logging in.</p>
+<div id="joining-data" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Joining Data<a href="joining-data.html#joining-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In your thesis journey, you might need to use <strong>diverse datasets</strong>, most of which are <strong>relational databases</strong>. Relational databases are datasets that can be <strong>linked to another</strong> through a <strong>common key</strong>; the key is usually a unique identifier such as IDs or your own <em>Clave Única</em>.</p>
+<hr />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="images/relation.jpg" alt="Source [Heavy.AI](https://www.heavy.ai/technical-glossary/relational-database)" width="100%" />
+<p class="caption">
+Figure 4.1: Source <a href="https://www.heavy.ai/technical-glossary/relational-database">Heavy.AI</a>
+</p>
+</div>
+<hr />
+<p>We leave the <strong>data joining and relational data bases criteria</strong> to the experts through this <a href="https://www.garrickadenbuie.com/project/tidyexplain/">comprehensive resource</a>.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-basics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="plotting-with-ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -241,7 +240,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/crispydoggo/Research_Seminar/edit/main/01-R_1.Rmd",
+"link": "https://github.com/crispydoggo/Research_Seminar/edit/main/02-R_2.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -29,7 +29,7 @@
   
   
 <link rel="prev" href="r-basics.html"/>
-<link rel="next" href="plotting-with-ggplot2.html"/>
+<link rel="next" href="joining-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,6 +50,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -141,19 +143,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1" data-path="r-basics.html"><a href="r-basics.html#installing-packages"><i class="fa fa-check"></i><b>2.1</b> Installing Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>3</b> Data wrangling</a></li>
-<li class="chapter" data-level="4" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Plotting with ggplot2</a></li>
-<li class="part"><span><b>Empirical Methods</b></span></li>
-<li class="chapter" data-level="5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html"><i class="fa fa-check"></i><b>5</b> Instrumental Variables: The Colonial Origins of Comparative Development</a>
+<li class="chapter" data-level="3" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>3</b> Data wrangling</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>5.1</b> Paper Discussion</a></li>
-<li class="chapter" data-level="5.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>5.2</b> Key Results</a></li>
-<li class="chapter" data-level="5.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>5.3</b> Endogeneity Discussion</a></li>
-<li class="chapter" data-level="5.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>5.4</b> Instrumental Variables</a></li>
-<li class="chapter" data-level="5.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>5.5</b> IV Part 2</a></li>
+<li class="chapter" data-level="3.1" data-path="data-wrangling.html"><a href="data-wrangling.html#data-set"><i class="fa fa-check"></i><b>3.1</b> Data Set</a></li>
+<li class="chapter" data-level="3.2" data-path="data-wrangling.html"><a href="data-wrangling.html#dplyrs-wonder"><i class="fa fa-check"></i><b>3.2</b> Dplyr’s Wonder</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#add-or-change-variables"><i class="fa fa-check"></i>1. Add or change variables</a></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#filter-the-data-set"><i class="fa fa-check"></i>2. Filter the data set</a></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#select-variables-of-interest"><i class="fa fa-check"></i>3. Select variables of interest</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>6</b> RDD</a></li>
-<li class="chapter" data-level="7" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>7</b> DD</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="joining-data.html"><a href="joining-data.html"><i class="fa fa-check"></i><b>4</b> Joining Data</a></li>
+<li class="chapter" data-level="5" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html"><i class="fa fa-check"></i><b>5</b> Plotting with ggplot2</a></li>
+<li class="part"><span><b>Empirical Methods</b></span></li>
+<li class="chapter" data-level="6" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html"><i class="fa fa-check"></i><b>6</b> Instrumental Variables: The Colonial Origins of Comparative Development</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>6.1</b> Paper Discussion</a></li>
+<li class="chapter" data-level="6.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>6.2</b> Key Results</a></li>
+<li class="chapter" data-level="6.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>6.3</b> Endogeneity Discussion</a></li>
+<li class="chapter" data-level="6.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>6.4</b> Instrumental Variables</a></li>
+<li class="chapter" data-level="6.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>6.5</b> IV Part 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>7</b> RDD</a></li>
+<li class="chapter" data-level="8" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>8</b> DD</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/crispydoggo/Research_Seminar" target="blank">Source code</a></li>
 
@@ -180,6 +192,525 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="data-wrangling" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Data wrangling<a href="data-wrangling.html#data-wrangling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Data manipulation is surprisingly easy with R. You only need the <code>dplyr</code> library included in the <code>tidyverse</code> package and know a few words.</p>
+<div id="data-set" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Data Set<a href="data-wrangling.html#data-set" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section will work with the Iris data set inherited as default R. Iris was introduced by Ronald Fisher in his 1936 paper <strong>The use of multiple measurements in taxonomic problems</strong>, contains <strong>three plant species</strong> (setosa, virginica, versicolor) and <strong>four features</strong> measured for each sample.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-wrangling.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The datasets package needs to be loaded to access our data </span></span>
+<span id="cb3-2"><a href="data-wrangling.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For a full list of these datasets, type library(help = &quot;datasets&quot;)</span></span>
+<span id="cb3-3"><a href="data-wrangling.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
+<span id="cb3-4"><a href="data-wrangling.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span></code></pre></div>
+<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Sepal.Length
+</th>
+<th style="text-align:right;">
+Sepal.Width
+</th>
+<th style="text-align:right;">
+Petal.Length
+</th>
+<th style="text-align:right;">
+Petal.Width
+</th>
+<th style="text-align:left;">
+Species
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+5.1
+</td>
+<td style="text-align:right;">
+3.5
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.7
+</td>
+<td style="text-align:right;">
+3.2
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.6
+</td>
+<td style="text-align:right;">
+3.1
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;">
+3.6
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.4
+</td>
+<td style="text-align:right;">
+3.9
+</td>
+<td style="text-align:right;">
+1.7
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dplyrs-wonder" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Dplyr’s Wonder<a href="data-wrangling.html#dplyrs-wonder" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>dplyr</code> package allows <strong>easy manipulation</strong> through <strong>“verbs”</strong> with a novel pipeline feature. The pipelines shine when you need to arrange many features, which is usually the case.</p>
+<ul>
+<li><p><code>dplyr</code> verbs are the name of the functions to arrange the data; these include filter, mutate, arrange, group_by and more.</p></li>
+<li><p><strong>The pipeline</strong> <code>%&gt;%</code> means <em>take the name of the previous object and put it in the first argument of the next function</em>. The pipelines shin</p></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-wrangling.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-2"><a href="data-wrangling.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="data-wrangling.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Filter without dplyr</span></span>
+<span id="cb4-4"><a href="data-wrangling.html#cb4-4" aria-hidden="true" tabindex="-1"></a>example <span class="ot">&lt;-</span> <span class="fu">filter</span>(iris, Sepal.Width <span class="sc">==</span> <span class="fl">3.5</span>)</span>
+<span id="cb4-5"><a href="data-wrangling.html#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="data-wrangling.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Filter with dplyr</span></span>
+<span id="cb4-7"><a href="data-wrangling.html#cb4-7" aria-hidden="true" tabindex="-1"></a>example <span class="ot">&lt;-</span> iris <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="data-wrangling.html#cb4-8" aria-hidden="true" tabindex="-1"></a>           <span class="fu">filter</span>( Sepal.Width <span class="sc">==</span> <span class="fl">3.5</span>)</span></code></pre></div>
+<p>Here we will cover 3 basic verbs you might need in your journey; you can consult the <a href="https://www.maximaformacion.es/blog-ciencia-datos/top-10-manipulacion-de-datos-con-dplyr/">most useful manipulation tips</a> here.</p>
+<div id="add-or-change-variables" class="section level4 unnumbered hasAnchor">
+<h4>1. Add or change variables<a href="data-wrangling.html#add-or-change-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-wrangling.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a href="data-wrangling.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="data-wrangling.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. The mutate verb</span></span>
+<span id="cb5-4"><a href="data-wrangling.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="data-wrangling.html#cb5-5" aria-hidden="true" tabindex="-1"></a>example <span class="ot">&lt;-</span> iris <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="data-wrangling.html#cb5-6" aria-hidden="true" tabindex="-1"></a>           <span class="co"># A. You can add a complete new variable</span></span>
+<span id="cb5-7"><a href="data-wrangling.html#cb5-7" aria-hidden="true" tabindex="-1"></a>           <span class="fu">mutate</span>( <span class="at">new_var =</span> <span class="fl">3.3</span><span class="sc">+</span><span class="dv">6</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8"><a href="data-wrangling.html#cb5-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-9"><a href="data-wrangling.html#cb5-9" aria-hidden="true" tabindex="-1"></a>           <span class="co"># B. You can change current variables</span></span>
+<span id="cb5-10"><a href="data-wrangling.html#cb5-10" aria-hidden="true" tabindex="-1"></a>           <span class="fu">mutate</span>(  <span class="at">Sepal.Width =</span> new_var <span class="sc">+</span> Sepal.Width)</span></code></pre></div>
+<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Sepal.Length
+</th>
+<th style="text-align:right;">
+Sepal.Width
+</th>
+<th style="text-align:right;">
+Petal.Length
+</th>
+<th style="text-align:right;">
+Petal.Width
+</th>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+new_var
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+5.1
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+8.0
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+4.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+7.5
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+4.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.7
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+7.7
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+4.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.6
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+7.6
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+4.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+8.1
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+4.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.4
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+8.4
+</td>
+<td style="text-align:right;">
+1.7
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:left;">
+setosa
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+4.5
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="filter-the-data-set" class="section level4 unnumbered hasAnchor">
+<h4>2. Filter the data set<a href="data-wrangling.html#filter-the-data-set" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-wrangling.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. The filter verb</span></span>
+<span id="cb6-2"><a href="data-wrangling.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="data-wrangling.html#cb6-3" aria-hidden="true" tabindex="-1"></a>example <span class="ot">&lt;-</span> iris <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="data-wrangling.html#cb6-4" aria-hidden="true" tabindex="-1"></a>           <span class="co"># A. You can filter with specific logical criteria</span></span>
+<span id="cb6-5"><a href="data-wrangling.html#cb6-5" aria-hidden="true" tabindex="-1"></a>           <span class="fu">filter</span>( Sepal.Length <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-6"><a href="data-wrangling.html#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="data-wrangling.html#cb6-7" aria-hidden="true" tabindex="-1"></a>           <span class="co"># B. You can add multiple conditions</span></span>
+<span id="cb6-8"><a href="data-wrangling.html#cb6-8" aria-hidden="true" tabindex="-1"></a>           <span class="fu">filter</span>( Sepal.Length <span class="sc">&gt;</span> <span class="dv">5</span>, Sepal.Width <span class="sc">&lt;</span> <span class="dv">3</span>)</span></code></pre></div>
+<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Sepal.Length
+</th>
+<th style="text-align:right;">
+Sepal.Width
+</th>
+<th style="text-align:right;">
+Petal.Length
+</th>
+<th style="text-align:right;">
+Petal.Width
+</th>
+<th style="text-align:left;">
+Species
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+5.5
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+2.3
+</td>
+<td style="text-align:right;">
+4.0
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:left;">
+versicolor
+</td>
+</tr>
+<tr>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+6.5
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+2.8
+</td>
+<td style="text-align:right;">
+4.6
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:left;">
+versicolor
+</td>
+</tr>
+<tr>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+5.7
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+2.8
+</td>
+<td style="text-align:right;">
+4.5
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:left;">
+versicolor
+</td>
+</tr>
+<tr>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+6.6
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+2.9
+</td>
+<td style="text-align:right;">
+4.6
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:left;">
+versicolor
+</td>
+</tr>
+<tr>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+5.2
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+2.7
+</td>
+<td style="text-align:right;">
+3.9
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:left;">
+versicolor
+</td>
+</tr>
+<tr>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+6.0
+</td>
+<td style="text-align:right;background-color: #d8d9fb !important;">
+2.2
+</td>
+<td style="text-align:right;">
+4.0
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:left;">
+versicolor
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="select-variables-of-interest" class="section level4 unnumbered hasAnchor">
+<h4>3. Select variables of interest<a href="data-wrangling.html#select-variables-of-interest" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="data-wrangling.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. The select verb</span></span>
+<span id="cb7-2"><a href="data-wrangling.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="data-wrangling.html#cb7-3" aria-hidden="true" tabindex="-1"></a>example <span class="ot">&lt;-</span> iris <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="data-wrangling.html#cb7-4" aria-hidden="true" tabindex="-1"></a>           <span class="co"># A. You can select existing variables</span></span>
+<span id="cb7-5"><a href="data-wrangling.html#cb7-5" aria-hidden="true" tabindex="-1"></a>           <span class="fu">select</span>( Sepal.Length, Sepal.Width, Species) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-6"><a href="data-wrangling.html#cb7-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-7"><a href="data-wrangling.html#cb7-7" aria-hidden="true" tabindex="-1"></a>           <span class="co"># B. You can also remove just one</span></span>
+<span id="cb7-8"><a href="data-wrangling.html#cb7-8" aria-hidden="true" tabindex="-1"></a>           <span class="fu">select</span>( <span class="sc">-</span>Species)</span></code></pre></div>
+<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+Sepal.Length
+</th>
+<th style="text-align:right;">
+Sepal.Width
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+5.1
+</td>
+<td style="text-align:right;">
+3.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.7
+</td>
+<td style="text-align:right;">
+3.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4.6
+</td>
+<td style="text-align:right;">
+3.1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;">
+3.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5.4
+</td>
+<td style="text-align:right;">
+3.9
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
             </section>
 
@@ -187,7 +718,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="r-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="plotting-with-ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="joining-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

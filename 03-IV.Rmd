@@ -24,10 +24,7 @@ library(estimatr)
 library(ivreg) 
 ```
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 
-```
 
 ## Paper Discussion
 

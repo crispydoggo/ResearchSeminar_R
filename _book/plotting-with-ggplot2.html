@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Plotting with ggplot2 | _main.knit</title>
+  <title>5 Plotting with ggplot2 | _main.knit</title>
   <meta name="description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Plotting with ggplot2 | _main.knit" />
+  <meta property="og:title" content="5 Plotting with ggplot2 | _main.knit" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/logo.png" />
   <meta property="og:description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Plotting with ggplot2 | _main.knit" />
+  <meta name="twitter:title" content="5 Plotting with ggplot2 | _main.knit" />
   
   <meta name="twitter:description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="twitter:image" content="/images/logo.png" />
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-wrangling.html"/>
+<link rel="prev" href="joining-data.html"/>
 <link rel="next" href="instrumental-variables-the-colonial-origins-of-comparative-development.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -50,6 +50,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -141,19 +143,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1" data-path="r-basics.html"><a href="r-basics.html#installing-packages"><i class="fa fa-check"></i><b>2.1</b> Installing Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>3</b> Data wrangling</a></li>
-<li class="chapter" data-level="4" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Plotting with ggplot2</a></li>
-<li class="part"><span><b>Empirical Methods</b></span></li>
-<li class="chapter" data-level="5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html"><i class="fa fa-check"></i><b>5</b> Instrumental Variables: The Colonial Origins of Comparative Development</a>
+<li class="chapter" data-level="3" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>3</b> Data wrangling</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>5.1</b> Paper Discussion</a></li>
-<li class="chapter" data-level="5.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>5.2</b> Key Results</a></li>
-<li class="chapter" data-level="5.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>5.3</b> Endogeneity Discussion</a></li>
-<li class="chapter" data-level="5.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>5.4</b> Instrumental Variables</a></li>
-<li class="chapter" data-level="5.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>5.5</b> IV Part 2</a></li>
+<li class="chapter" data-level="3.1" data-path="data-wrangling.html"><a href="data-wrangling.html#data-set"><i class="fa fa-check"></i><b>3.1</b> Data Set</a></li>
+<li class="chapter" data-level="3.2" data-path="data-wrangling.html"><a href="data-wrangling.html#dplyrs-wonder"><i class="fa fa-check"></i><b>3.2</b> Dplyr’s Wonder</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#add-or-change-variables"><i class="fa fa-check"></i>1. Add or change variables</a></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#filter-the-data-set"><i class="fa fa-check"></i>2. Filter the data set</a></li>
+<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#select-variables-of-interest"><i class="fa fa-check"></i>3. Select variables of interest</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>6</b> RDD</a></li>
-<li class="chapter" data-level="7" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>7</b> DD</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="joining-data.html"><a href="joining-data.html"><i class="fa fa-check"></i><b>4</b> Joining Data</a></li>
+<li class="chapter" data-level="5" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html"><i class="fa fa-check"></i><b>5</b> Plotting with ggplot2</a></li>
+<li class="part"><span><b>Empirical Methods</b></span></li>
+<li class="chapter" data-level="6" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html"><i class="fa fa-check"></i><b>6</b> Instrumental Variables: The Colonial Origins of Comparative Development</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>6.1</b> Paper Discussion</a></li>
+<li class="chapter" data-level="6.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>6.2</b> Key Results</a></li>
+<li class="chapter" data-level="6.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>6.3</b> Endogeneity Discussion</a></li>
+<li class="chapter" data-level="6.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>6.4</b> Instrumental Variables</a></li>
+<li class="chapter" data-level="6.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>6.5</b> IV Part 2</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>7</b> RDD</a></li>
+<li class="chapter" data-level="8" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>8</b> DD</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/crispydoggo/Research_Seminar" target="blank">Source code</a></li>
 
@@ -178,8 +190,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="images/hero.png">
 </div>
-<div id="plotting-with-ggplot2" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Plotting with ggplot2<a href="plotting-with-ggplot2.html#plotting-with-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="plotting-with-ggplot2" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Plotting with ggplot2<a href="plotting-with-ggplot2.html#plotting-with-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
 </div>
 
@@ -190,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="data-wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="joining-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="instrumental-variables-the-colonial-origins-of-comparative-development.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
