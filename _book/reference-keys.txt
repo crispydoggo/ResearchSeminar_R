@@ -1,0 +1,9 @@
+setting-r
+r-basics
+installing-packages
+data-wrangling
+plotting-with-ggplot2
+instrumental-variables-the-colonial-origins-of-comparative-development
+paper-discussion
+rdd
+dd
