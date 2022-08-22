@@ -1,4 +1,6 @@
 fig:unnamed-chunk-4
+fig:unnamed-chunk-6
+fig:unnamed-chunk-8
 setting-r
 r-basics
 installing-packages
@@ -6,7 +8,15 @@ data-wrangling
 data-set
 dplyrs-wonder
 joining-data
-plotting-with-ggplot2
+join-verbs
+plotting-with-r
+the-magic-of-ggplot2
+ggthemes
+export-your-graph
+fancy-tables
+guides-for-styling
+latex
+for-word
 instrumental-variables-the-colonial-origins-of-comparative-development
 paper-discussion
 key-results

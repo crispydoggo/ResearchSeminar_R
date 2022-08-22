@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Plotting with ggplot2 | _main.knit</title>
+  <title>3 Plotting with ggplot2 | _main.knit</title>
   <meta name="description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Plotting with ggplot2 | _main.knit" />
+  <meta property="og:title" content="3 Plotting with ggplot2 | _main.knit" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/logo.png" />
   <meta property="og:description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Plotting with ggplot2 | _main.knit" />
+  <meta name="twitter:title" content="3 Plotting with ggplot2 | _main.knit" />
   
   <meta name="twitter:description" content="These are the online lecture notes for empirical methods using R from Jaakko’s Research Seminar at ITAM." />
   <meta name="twitter:image" content="/images/logo.png" />
@@ -50,8 +50,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -136,36 +134,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="toc-logo"><a href="./"><img src="images/logo.png"></a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="part"><span><b>R crash course</b></span></li>
-<li class="chapter" data-level="1" data-path="setting-r.html"><a href="setting-r.html"><i class="fa fa-check"></i><b>1</b> Setting R</a></li>
-<li class="chapter" data-level="2" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>2</b> R Basics</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like <span>https://bookdown.org/yihui/bookdown</span></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#part-r-crash-course"><i class="fa fa-check"></i>(PART*) R crash course</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="r-basics.html"><a href="r-basics.html#installing-packages"><i class="fa fa-check"></i><b>2.1</b> Installing Packages</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>3</b> Data wrangling</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.1</b> Installing Packages</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#data-set"><i class="fa fa-check"></i><b>1.2</b> Data Set</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#dplyrs-wonder"><i class="fa fa-check"></i><b>1.3</b> Dplyr’s Wonder</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="data-wrangling.html"><a href="data-wrangling.html#data-set"><i class="fa fa-check"></i><b>3.1</b> Data Set</a></li>
-<li class="chapter" data-level="3.2" data-path="data-wrangling.html"><a href="data-wrangling.html#dplyrs-wonder"><i class="fa fa-check"></i><b>3.2</b> Dplyr’s Wonder</a>
-<ul>
-<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#add-or-change-variables"><i class="fa fa-check"></i>1. Add or change variables</a></li>
-<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#filter-the-data-set"><i class="fa fa-check"></i>2. Filter the data set</a></li>
-<li class="chapter" data-level="" data-path="data-wrangling.html"><a href="data-wrangling.html#select-variables-of-interest"><i class="fa fa-check"></i>3. Select variables of interest</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#add-or-change-variables"><i class="fa fa-check"></i>1. Add or change variables</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#filter-the-data-set"><i class="fa fa-check"></i>2. Filter the data set</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#select-variables-of-interest"><i class="fa fa-check"></i>3. Select variables of interest</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="joining-data.html"><a href="joining-data.html"><i class="fa fa-check"></i><b>4</b> Joining Data</a></li>
-<li class="chapter" data-level="5" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html"><i class="fa fa-check"></i><b>5</b> Plotting with ggplot2</a></li>
+<li class="chapter" data-level="2" data-path="joining-data.html"><a href="joining-data.html"><i class="fa fa-check"></i><b>2</b> Joining Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="joining-data.html"><a href="joining-data.html#join-verbs"><i class="fa fa-check"></i><b>2.1</b> Join verbs</a>
+<ul>
+<li class="chapter" data-level="" data-path="joining-data.html"><a href="joining-data.html#left-join"><i class="fa fa-check"></i>Left Join</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Plotting with ggplot2</a>
+<ul>
+<li class="chapter" data-level="" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html#data"><i class="fa fa-check"></i>1. Data</a></li>
+<li class="chapter" data-level="" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html#aesthetics"><i class="fa fa-check"></i>2. Aesthetics</a></li>
+<li class="chapter" data-level="" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html#geometrics"><i class="fa fa-check"></i>3. Geometrics</a></li>
+<li class="chapter" data-level="" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html#themes"><i class="fa fa-check"></i>4. Themes</a></li>
+<li class="chapter" data-level="3.1" data-path="plotting-with-ggplot2.html"><a href="plotting-with-ggplot2.html#ggthemes"><i class="fa fa-check"></i><b>3.1</b> Ggthemes</a></li>
+</ul></li>
 <li class="part"><span><b>Empirical Methods</b></span></li>
-<li class="chapter" data-level="6" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html"><i class="fa fa-check"></i><b>6</b> Instrumental Variables: The Colonial Origins of Comparative Development</a>
+<li class="chapter" data-level="4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html"><i class="fa fa-check"></i><b>4</b> Instrumental Variables: The Colonial Origins of Comparative Development</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>6.1</b> Paper Discussion</a></li>
-<li class="chapter" data-level="6.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>6.2</b> Key Results</a></li>
-<li class="chapter" data-level="6.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>6.3</b> Endogeneity Discussion</a></li>
-<li class="chapter" data-level="6.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>6.4</b> Instrumental Variables</a></li>
-<li class="chapter" data-level="6.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>6.5</b> IV Part 2</a></li>
+<li class="chapter" data-level="4.1" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#paper-discussion"><i class="fa fa-check"></i><b>4.1</b> Paper Discussion</a></li>
+<li class="chapter" data-level="4.2" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#key-results"><i class="fa fa-check"></i><b>4.2</b> Key Results</a></li>
+<li class="chapter" data-level="4.3" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#endogeneity-discussion"><i class="fa fa-check"></i><b>4.3</b> Endogeneity Discussion</a></li>
+<li class="chapter" data-level="4.4" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#instrumental-variables"><i class="fa fa-check"></i><b>4.4</b> Instrumental Variables</a></li>
+<li class="chapter" data-level="4.5" data-path="instrumental-variables-the-colonial-origins-of-comparative-development.html"><a href="instrumental-variables-the-colonial-origins-of-comparative-development.html#iv-part-2"><i class="fa fa-check"></i><b>4.5</b> IV Part 2</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>7</b> RDD</a></li>
-<li class="chapter" data-level="8" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>8</b> DD</a></li>
+<li class="chapter" data-level="5" data-path="rdd.html"><a href="rdd.html"><i class="fa fa-check"></i><b>5</b> RDD</a></li>
+<li class="chapter" data-level="6" data-path="dd.html"><a href="dd.html"><i class="fa fa-check"></i><b>6</b> DD</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/crispydoggo/Research_Seminar" target="blank">Source code</a></li>
 
@@ -190,9 +196,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="images/hero.png">
 </div>
-<div id="plotting-with-ggplot2" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Plotting with ggplot2<a href="plotting-with-ggplot2.html#plotting-with-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="plotting-with-ggplot2" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Plotting with ggplot2<a href="plotting-with-ggplot2.html#plotting-with-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>You will probably <strong>present exciting results</strong> with the help of <strong>figures</strong> and plots. The <code>ggplot2</code> package allows us to <strong>design</strong> beautiful <strong>graphs</strong> with relatively <strong>low effort</strong> in R. ggplot2 is designed to build up graphs in 4 steps:</p>
+<hr />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="images/layer.png" alt="Source DataCamp" width="75%" />
+<p class="caption">
+Figure 3.1: Source DataCamp
+</p>
+</div>
+<hr />
+<div id="data" class="section level4 unnumbered hasAnchor">
+<h4>1. Data<a href="plotting-with-ggplot2.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The first step is to provide a data set from which the data will be taken.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="plotting-with-ggplot2.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span></code></pre></div>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+## ✔ tibble  3.1.8     ✔ dplyr   1.0.9
+## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
+## ✔ readr   2.1.2     ✔ forcats 0.5.1
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="plotting-with-ggplot2.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Let&#39;s generate some data</span></span>
+<span id="cb5-2"><a href="plotting-with-ggplot2.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="plotting-with-ggplot2.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">30</span></span>
+<span id="cb5-4"><a href="plotting-with-ggplot2.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">30</span>) <span class="co"># random numbers from a normal distribution</span></span>
+<span id="cb5-5"><a href="plotting-with-ggplot2.html#cb5-5" aria-hidden="true" tabindex="-1"></a>  label <span class="ot">&lt;-</span> x <span class="sc">&lt;</span> <span class="dv">15</span> <span class="co"># True / False boolean vector</span></span>
+<span id="cb5-6"><a href="plotting-with-ggplot2.html#cb5-6" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(x,y, label) <span class="co"># data frame (tibble) object</span></span></code></pre></div>
+</div>
+<div id="aesthetics" class="section level4 unnumbered hasAnchor">
+<h4>2. Aesthetics<a href="plotting-with-ggplot2.html#aesthetics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The second step is to specify which data set elements will be mapped to an excellent plot.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="plotting-with-ggplot2.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Specify Elements</span></span>
+<span id="cb6-2"><a href="plotting-with-ggplot2.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="plotting-with-ggplot2.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="co"># Specify the data set</span></span>
+<span id="cb6-4"><a href="plotting-with-ggplot2.html#cb6-4" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">aes</span>(x,y, <span class="at">color =</span> label)) <span class="co"># Specify the elements to map</span></span>
+<span id="cb6-5"><a href="plotting-with-ggplot2.html#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="plotting-with-ggplot2.html#cb6-6" aria-hidden="true" tabindex="-1"></a>graph <span class="co"># We expect a blank canvas</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="50%" /></p>
+</div>
+<div id="geometrics" class="section level4 unnumbered hasAnchor">
+<h4>3. Geometrics<a href="plotting-with-ggplot2.html#geometrics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now that we have specified where the data is coming from and which elements we will use, we need to tell ggplot how we want to visualize the data, i.e., the plotting (geom in <code>ggplot2</code>).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="plotting-with-ggplot2.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Specifiy how to plot the data</span></span>
+<span id="cb7-2"><a href="plotting-with-ggplot2.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="plotting-with-ggplot2.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="co"># Specify the data set</span></span>
+<span id="cb7-4"><a href="plotting-with-ggplot2.html#cb7-4" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">aes</span>(x,y, <span class="at">color =</span> label)) <span class="sc">+</span> <span class="co"># Specify the elements to map</span></span>
+<span id="cb7-5"><a href="plotting-with-ggplot2.html#cb7-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># Scatter Plot</span></span>
+<span id="cb7-6"><a href="plotting-with-ggplot2.html#cb7-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">geom_line</span>()   <span class="co"># Line Plot</span></span>
+<span id="cb7-7"><a href="plotting-with-ggplot2.html#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="plotting-with-ggplot2.html#cb7-8" aria-hidden="true" tabindex="-1"></a>graph <span class="co"># We now see the points!</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="50%" /></p>
+</div>
+<div id="themes" class="section level4 unnumbered hasAnchor">
+<h4>4. Themes<a href="plotting-with-ggplot2.html#themes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Finally, we can tell ggplot how we want the look and feel of our graph. Do we want a bold font or large font? You can change every aspect of the graph with the <code>theme()</code> function.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="plotting-with-ggplot2.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Personalize your graph!</span></span>
+<span id="cb8-2"><a href="plotting-with-ggplot2.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="plotting-with-ggplot2.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data, <span class="co"># Specify the data set</span></span>
+<span id="cb8-4"><a href="plotting-with-ggplot2.html#cb8-4" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">aes</span>(x,y, <span class="at">color =</span> label)) <span class="sc">+</span> <span class="co"># Specify the elements to map</span></span>
+<span id="cb8-5"><a href="plotting-with-ggplot2.html#cb8-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># Scatter Plot</span></span>
+<span id="cb8-6"><a href="plotting-with-ggplot2.html#cb8-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">geom_line</span>() <span class="sc">+</span>  <span class="co"># Line Plot</span></span>
+<span id="cb8-7"><a href="plotting-with-ggplot2.html#cb8-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;Black&quot;</span>, <span class="at">size =</span> <span class="dv">12</span>)) <span class="co"># Add theme</span></span>
+<span id="cb8-8"><a href="plotting-with-ggplot2.html#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="plotting-with-ggplot2.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Print graph</span></span>
+<span id="cb8-10"><a href="plotting-with-ggplot2.html#cb8-10" aria-hidden="true" tabindex="-1"></a>graph </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="50%" /></p>
+<p><code>ggplot2</code> has the novelty of identifying the graphs as objects, which means that we can store graphs in variables and lists. Further, we can add more elements to a stored value with the <code>+</code>operator.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="plotting-with-ggplot2.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the last example we forgot to add labels</span></span>
+<span id="cb9-2"><a href="plotting-with-ggplot2.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="plotting-with-ggplot2.html#cb9-3" aria-hidden="true" tabindex="-1"></a>graph <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;y&quot;</span>, </span>
+<span id="cb9-4"><a href="plotting-with-ggplot2.html#cb9-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;x&quot;</span>, </span>
+<span id="cb9-5"><a href="plotting-with-ggplot2.html#cb9-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Figure 1: Plotting with style&quot;</span>, </span>
+<span id="cb9-6"><a href="plotting-with-ggplot2.html#cb9-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;Jaakko&#39;s Online Resources&quot;</span>,</span>
+<span id="cb9-7"><a href="plotting-with-ggplot2.html#cb9-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">colour =</span> <span class="cn">NULL</span>, </span>
+<span id="cb9-8"><a href="plotting-with-ggplot2.html#cb9-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">&quot; Source: god&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="50%" /></p>
+</div>
+<div id="ggthemes" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Ggthemes<a href="plotting-with-ggplot2.html#ggthemes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Even with full customization, trying different styles to best suit your graph could be exhausting. That’s why ggplot2 and other friendly people online have developed pre-defined themes for you to use with one line of code!</p>
+<p>-<a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">Ggplot themes</a></p>
+<ul>
+<li><p><a href="https://github.com/bbc/bbplot/">BBC Style</a></p></li>
+<li><p><a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">Ggthemes (expansion)</a></p></li>
+<li><p><a href="https://github.com/ricardo-bion/ggtech">GGtech</a></p></li>
+</ul>
 
+</div>
 </div>
 
 
@@ -257,20 +350,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
