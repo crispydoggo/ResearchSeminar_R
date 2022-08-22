@@ -17,9 +17,10 @@ fancy-tables
 guides-for-styling
 latex
 for-word
-instrumental-variables-the-colonial-origins-of-comparative-development
+empirical-methods-resources
+exercise-1-instrumental-variables
+packages-and-data
 paper-discussion
-key-results
 endogeneity-discussion
 instrumental-variables
 iv-part-2
