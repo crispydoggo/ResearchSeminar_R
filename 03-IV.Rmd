@@ -67,16 +67,14 @@ Acemoglu et al. study institutions with **more secure property rights** and **le
 
 ## Endogeneity Discussion
 
-Institutions may be endogenous for various reasons. Acemoglu et al. thus use an instrumental variables approach. The proposed instrument is the **mortality of settlers**; they justify it by arguing that the mortality of settlers **doesn't** affect the **GDP per capita today**.
-
-Yet, the **exclusion restriction** states that the instrument $Z$ must also be uncorrelated with the error term, $\epsilon$. A **threat** is that past health determines **current health**; thus, past health is correlated with GDP. Although, they justify the uncorrelatedness of mortality with GDP by arguing that the natives were resilient to the diseases that killed the settlers.
+Institutions may be endogenous for various reasons. Acemoglu et al. thus use an instrumental variables approach. The proposed instrument is the **mortality of settlers**; they justify it by arguing that the mortality of settlers **doesn't** affect the **GDP per capita today**. Yet, the **exclusion restriction** states that the instrument $Z$ must also be uncorrelated with the error term, $\epsilon$. A **threat** is that past health determines **current health**; thus, past health is correlated with GDP. Although, they justify the uncorrelatedness of mortality with GDP by arguing that the natives were resilient to the diseases that killed the settlers.
 
 
 
 ## Instrumental Variables
 
 
-1. Plot a nice-looking graph that illustrates the relationship between the outcome variable and the instrument.
+Let's plot a nice-looking graph illustrating the relationship between the outcome variable and the instrument.
 
 ```{r graph_2, include = TRUE}
 
